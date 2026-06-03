@@ -45,7 +45,8 @@ async function fetchNews(reset = true) {
 
     // ===================== ТВОЙ URL С КЛЮЧОМ =====================
     // ЭТО ТОТ САМЫЙ URL, КОТОРЫЙ ТЫ ХОТЕЛ ВСТАВИТЬ
-    const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(currentQuery)}&max=${PAGE_SIZE}&page=${currentPage}&apikey=${API_KEY}`;
+    // const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(currentQuery)}&max=${PAGE_SIZE}&page=${currentPage}&apikey=${API_KEY}`;
+    const url = `https://cors-anywhere.herokuapp.com/https://gnews.io/api/v4/search?q=${encodeURIComponent(currentQuery)}&max=${PAGE_SIZE}&page=${currentPage}&apikey=${API_KEY}`;
     // ============================================================
 
     try {
