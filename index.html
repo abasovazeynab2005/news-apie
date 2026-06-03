@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости мира — учебный проект</title>
+    <!-- подключаем CSS (из папки css) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- ШАПКА С ПОИСКОМ -->
+    <div class="header">
+        <h1>📰 Мировые новости</h1>
+        
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="Введите тему... (например: космос, футбол, погода)">
+            <button id="searchBtn">🔍 Искать</button>
+        </div>
+
+        <!-- БЛОК С ХЕШТЕГАМИ (категориями) -->
+        <div class="hashtags" id="hashtagsContainer">
+            <!-- сюда JS добавит кнопки-хештеги -->
+        </div>
+    </div>
+
+
+    <!-- ЗДЕСЬ БУДУТ НОВОСТИ (карточки) -->
+    <div id="newsGrid" class="news-grid">
+        <div class="status-msg">⏳ Загружаем главные новости...</div>
+    </div>
+
+    <!-- КНОПКА "ЗАГРУЗИТЬ ЕЩЁ" -->
+    <div class="load-more-area" id="loadMoreWrapper" style="display: none;">
+        <button id="loadMoreBtn" class="load-more-btn">+ Загрузить ещё 20 новостей</button>
+    </div>
+
+    <footer>
+        📡 Данные предоставлены <a href="https://gnews.io" target="_blank">GNews API</a> • Учебный проект
+    </footer>
+</div>
+
+<!-- подключаем JavaScript (из папки js) -->
+<script src="script.js"></script>
+</body>
+</html>

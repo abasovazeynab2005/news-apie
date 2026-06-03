@@ -1,0 +1,231 @@
+/* ОБЩИЕ СТИЛИ — всё просто и понятно */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* удобный расчёт ширины */
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    padding: 20px;
+}
+
+/* Центрируем контент */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* ШАПКА (белая карточка) */
+.header {
+    background: white;
+    border-radius: 32px;
+    padding: 24px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    color: #1e2a3e;
+}
+
+/* ПОЛЕ ПОИСКА И КНОПКА */
+.search-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+#searchInput {
+    flex: 2;
+    padding: 14px 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+#searchBtn {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 0 28px;
+    border-radius: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#searchBtn:hover {
+    background: #0f172a;
+    transform: scale(0.97);
+}
+
+/* ХЕШТЕГИ (категории) */
+.hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.hashtag {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: #eef2ff;
+    color: #1e293b;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hashtag:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.96);
+}
+
+/* РАЗНЫЕ ЦВЕТА ДЛЯ ХЕШТЕГОВ (просто для красоты) */
+.hashtag[data-tag="music"] { background: #fce7f3; color: #be185d; }
+.hashtag[data-tag="technology"] { background: #e0f2fe; color: #0369a1; }
+.hashtag[data-tag="sports"] { background: #dcfce7; color: #15803d; }
+.hashtag[data-tag="science"] { background: #e0e7ff; color: #3730a3; }
+.hashtag[data-tag="health"] { background: #fed7aa; color: #9a3412; }
+.hashtag[data-tag="business"] { background: #cffafe; color: #0e7490; }
+.hashtag[data-tag="entertainment"] { background: #fef3c7; color: #b45309; }
+.hashtag[data-tag="gaming"] { background: #e9d5ff; color: #6b21a5; }
+.hashtag[data-tag="politics"] { background: #fee2e2; color: #b91c1c; }
+.hashtag[data-tag="world"] { background: #d1fae5; color: #065f46; }
+
+/* СЕТКА КАРТОЧЕК */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+/* ОДНА КАРТОЧКА НОВОСТИ */
+.news-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.news-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #e2e8f0;
+}
+
+.news-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.news-title a {
+    text-decoration: none;
+    color: #0f172a;
+}
+
+.news-title a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.news-description {
+    color: #334155;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+}
+
+/* КНОПКА "ЗАГРУЗИТЬ ЕЩЁ" */
+.load-more-area {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.load-more-btn {
+    background: white;
+    border: 1px solid #cbd5e1;
+    padding: 12px 32px;
+    border-radius: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.load-more-btn:hover {
+    background: #f1f5f9;
+}
+
+/* СООБЩЕНИЯ О СТАТУСЕ / ОШИБКАХ */
+.status-msg {
+    text-align: center;
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 60px;
+    grid-column: 1 / -1;
+}
+
+.error-msg {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #cbd5e1;
+}
+
+/* для телефонов */
+@media (max-width: 640px) {
+    body { padding: 12px; }
+    .header { padding: 16px; }
+    .search-area { flex-direction: column; }
+    #searchBtn { padding: 12px; }
+}
